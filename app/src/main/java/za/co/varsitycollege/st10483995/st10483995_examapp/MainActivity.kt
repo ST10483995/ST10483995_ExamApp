@@ -4,6 +4,7 @@ package za.co.varsitycollege.st10483995.st10483995_examapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -12,10 +13,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 data class SongVariables(
-    val song: String? = null,
-    val artist: String? = null,
-    val rating: Int? = null,
-    val comments: String? = null
+    var song: String? = null,
+    var artist: String? = null,
+    var rating: Int? = null,
+    var comments: String? = null
 )
 
 //Parallel arrays
@@ -29,6 +30,7 @@ val songs = mutableListOf(
 //Counter(s) declarations
 var currentIndex = 0
 var ratingCounter = 0
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,18 +46,30 @@ class MainActivity : AppCompatActivity() {
         val addButton = findViewById<Button>(R.id.addButton)
         val nextButton = findViewById<Button>(R.id.nextButton)
         val exitButton = findViewById<Button>(R.id.exitButton)
-        val songEdit = findViewById<TextView>(R.id.songEdit)
-        val artistEdit = findViewById<TextView>(R.id.artistEdit)
-        val ratingEdit = findViewById<TextView>(R.id.ratingEdit)
-        val commentEdit = findViewById<TextView>(R.id.commentEdit)
+        var songEdit = findViewById<EditText>(R.id.songEdit)
+        var artistEdit = findViewById<EditText>(R.id.artistEdit)
+        var ratingEdit = findViewById<EditText>(R.id.ratingEdit)
+        var commentEdit = findViewById<EditText>(R.id.commentEdit)
+
+
+
+
 
         //Adding to the playlist
         addButton.setOnClickListener {
+            Toast.makeText(this, "Please enter details above", Toast.LENGTH_SHORT).show()
+
             currentIndex++
 
-            if (currentIndex == 4) {
-                Toast.makeText(this, "Please enter details above", Toast.LENGTH_SHORT).show()
-            }
+            songs[currentIndex].song = songEdit.text.toString()
+            songs[currentIndex].artist = artistEdit.text.toString()
+            songs[currentIndex].rating = ratingEdit.inputType
+            songs[currentIndex].comments = commentEdit.text.toString()
+
+
+            intent.putExtra("songDetails", songs.toString())
+
+
         }
 
         //Calculating the average
@@ -63,9 +77,7 @@ class MainActivity : AppCompatActivity() {
 
         //Moving to the next page
         nextButton.setOnClickListener {
-            val intent = Intent(this, DisplayPage::class.java).apply {
-            intent.putExtra("songDetails", songs.toString())
-            }
+            val intent = Intent(this, DisplayPage::class.java)
             startActivity(intent)
         }
 

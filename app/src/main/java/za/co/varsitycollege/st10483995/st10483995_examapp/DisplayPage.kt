@@ -30,7 +30,7 @@ class DisplayPage : AppCompatActivity() {
 
         //Show the list and details
         displayButton.setOnClickListener {
-            
+            displayView.text = songInfo
         }
 
         //Show average ratings
