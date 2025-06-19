@@ -12,7 +12,7 @@ This app is designed to allow useres to create and manage their own playlists. T
 
 ## Screenshots
 
-[Exam App Source Code](https://github.com/user-attachments/assets/b337af5e-957c-471f-a1de-77fb62dab522)
+![Exam App Source Code](https://github.com/user-attachments/assets/b337af5e-957c-471f-a1de-77fb62dab522)
 
 The phone above shows the beginning of the souce code of the app. The code starts with the declarations of the parallel arrays and the components that make it up. The different types of variables are also declared at the very top, for both the Tring and Int values. The next thing initialised is the counters for both ethe arting counter that will be used for calculating the average, and the index counter that will be use to move within the arrays. At the ver bottom of the picture is the declaration of all the components that make up the UI and that will help the user to navigate through the app.
 
@@ -22,10 +22,12 @@ The Main Screen of the app is designed to be very simple. The top of the screen 
 
 ![Exam App View scrn](https://github.com/user-attachments/assets/deb5124b-a698-4fce-8092-4b6cf42d785a)
 
-The Detailed Views screen has an empty space that takes up most of the screen to allow the 
+The Detailed Views screen has an empty space that takes up most of the screen to allow the summary of all the playlists to be displayed and the average rating to be shown as well. On the bottom of the screen are 3 buttons that will; Show the playlists on the screen, Show the average rating on the screen, and return the user back to the main screen.
 
 
 ![Exam App detailed working](https://github.com/user-attachments/assets/fefdbd76-a451-43a3-a0cb-f974e4752ad3)
+
+The picture shows the all of the playlists that the user created. The average rating will be displayed when the user presses on the Average Button.
 
 
 
