@@ -53,31 +53,35 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
         //Adding to the playlist
         addButton.setOnClickListener {
             Toast.makeText(this, "Please enter details above", Toast.LENGTH_SHORT).show()
 
+            if(songEdit.text.isNotEmpty()) {
+                songs[currentIndex].song = songEdit.text.toString()
+            }
+            if (artistEdit.text.isNotEmpty()) {
+                songs[currentIndex].artist = artistEdit.text.toString()
+            }
+            if (ratingEdit.inputType.toString().isNotEmpty()) {
+                songs[currentIndex].rating = ratingEdit.inputType
+            }
+            if (commentEdit.text.isNotEmpty()){
+                songs[currentIndex].comments = commentEdit.text.toString()
+            }
             currentIndex++
-
-            songs[currentIndex].song = songEdit.text.toString()
-            songs[currentIndex].artist = artistEdit.text.toString()
-            songs[currentIndex].rating = ratingEdit.inputType
-            songs[currentIndex].comments = commentEdit.text.toString()
-
-
-            intent.putExtra("songDetails", songs.toString())
-
+            return@setOnClickListener
 
         }
 
         //Calculating the average
-
+        val total = 4
+        ratingCounter = ratingEdit.inputType
 
         //Moving to the next page
         nextButton.setOnClickListener {
             val intent = Intent(this, DisplayPage::class.java)
+            intent.putExtra("songDetails", songs.toString())
             startActivity(intent)
         }
 
