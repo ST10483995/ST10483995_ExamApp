@@ -18,11 +18,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Decla
+        //Declarations
         val addButton = findViewById<Button>(R.id.addButton)
         val nextButton = findViewById<Button>(R.id.nextButton)
         val exitButton = findViewById<Button>(R.id.exitButton)
 
+        //Adding to the playlist
+        addButton.setOnClickListener {  }
 
+        //Moving to the next page
+        nextButton.setOnClickListener {  }
+
+        //Closing the app
+        exitButton.setOnClickListener {  }
     }
 }
