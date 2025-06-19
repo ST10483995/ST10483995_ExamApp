@@ -5,12 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E9A4A4"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="342dp"
         android:layout_height="61dp"
-        android:text="Hello World!"
+        android:fontFamily="monospace"
+        android:text="Music Playlist"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -25,6 +30,7 @@
         android:layout_marginStart="157dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="186dp"
+        android:background="#121111"
         android:text="Add to Playlist"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +43,7 @@
         android:layout_marginStart="63dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="87dp"
+        android:background="#262323"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exitButton"
@@ -49,9 +56,60 @@
         android:layout_marginStart="95dp"
         android:layout_marginEnd="73dp"
         android:layout_marginBottom="86dp"
+        android:background="#0D0C0C"
         android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/nextButton" />
+
+    <EditText
+        android:id="@+id/songEdit"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="23dp"
+        android:hint="Please enter song name"
+        app:layout_constraintBottom_toTopOf="@+id/artistEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/artistEdit"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="9dp"
+        android:hint="Please enter artist name"
+        app:layout_constraintBottom_toTopOf="@+id/ratingEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ratingEdit"
+        android:layout_width="289dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="11dp"
+        android:hint="Please enter rating"
+        app:layout_constraintBottom_toTopOf="@+id/commentEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/commentEdit"
+        android:layout_width="286dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="132dp"
+        android:hint="Please enter comment"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

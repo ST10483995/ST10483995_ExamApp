@@ -25,9 +25,13 @@ class DisplayPage : AppCompatActivity() {
         val displayButton = findViewById<Button>(R.id.displayButton)
         val averageButton = findViewById<Button>(R.id.averageButton)
         val returnButton = findViewById<Button>(R.id.returnButton)
+        val bundle: Bundle? = intent.extras
+        val songInfo: String? = bundle?.getString("songDetails")
 
         //Show the list and details
-        displayButton.setOnClickListener {  }
+        displayButton.setOnClickListener {
+            
+        }
 
         //Show average ratings
         averageButton.setOnClickListener {  }
