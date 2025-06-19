@@ -24,10 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
         android:layout_marginEnd="164dp"
+        android:layout_marginBottom="186dp"
         android:text="Add to Playlist"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="497dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/nextButton"
@@ -35,10 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginEnd="95dp"
+        android:layout_marginBottom="87dp"
         android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exitButton"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="596dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/exitButton"
@@ -46,9 +48,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
         android:layout_marginEnd="73dp"
+        android:layout_marginBottom="86dp"
         android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nextButton"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintStart_toEndOf="@+id/nextButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

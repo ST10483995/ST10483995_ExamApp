@@ -1,12 +1,27 @@
 package za.co.varsitycollege.st10483995.st10483995_examapp
 //ST10483995 Lipalesa Lethole
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
+data class SongVariables(
+    val song: String? = null,
+    val artist: String? = null,
+    val rating: Int? = null,
+    val comments: String? = null
+)
+
+val songs = mutableListOf(
+    SongVariables("", "", 0, ""),
+    SongVariables("", "", 0, ""),
+    SongVariables("", "", 0, ""),
+    SongVariables("", "", 0, "")
+)
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +42,14 @@ class MainActivity : AppCompatActivity() {
         addButton.setOnClickListener {  }
 
         //Moving to the next page
-        nextButton.setOnClickListener {  }
+        nextButton.setOnClickListener {
+            val intent = Intent(this, DisplayPage::class.java)
+            startActivity(intent)
+        }
 
         //Closing the app
-        exitButton.setOnClickListener {  }
+        exitButton.setOnClickListener {
+            finishAffinity()
+        }
     }
 }
