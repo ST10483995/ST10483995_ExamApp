@@ -6,7 +6,7 @@ This app is designed to allow useres to create and manage their own playlists. T
 
 ## 🔗 Links
 
-![GitHub: ](https://github.com/ST10483995/ST10483995_ExamApp)
+![GitHub Link ](https://github.com/ST10483995/ST10483995_ExamApp)
 
 
 ## Screenshots
